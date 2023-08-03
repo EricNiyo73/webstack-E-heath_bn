@@ -1,12 +1,18 @@
-import express from 'express'
-import { SearchHospital,SearchMedicine,SearchPharmacy,SearchDoctor,SearchNurse } from "../controllers/search.js";
+import express from "express";
+import {
+  SearchHospital,
+  SearchMedicine,
+  SearchPharmacy,
+  SearchDoctor,
+  SearchNurse,
+} from "../controllers/search.js";
 
-const router= express.Router()
+const router = express.Router();
 
-router.post('/hospital',SearchHospital)
+router.get("/hospital", SearchHospital);
 
-router.post('/medicine',SearchMedicine)
-router.post('/pharmacy',SearchPharmacy)
-router.post('/doctor',SearchDoctor)
-router.post('/nurse',SearchNurse)
-export default router
+router.get("/medicine", SearchMedicine);
+router.get("/pharmacy", SearchPharmacy);
+router.get("/doctor", SearchDoctor);
+router.get("/nurse", SearchNurse);
+export default router;

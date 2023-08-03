@@ -60,21 +60,21 @@ app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}...`);
 });
 
-app.use("/api/admin/", AdminRouter);
-app.use("/api/admin/dashboard", AdminRouter);
-app.use("/api/pharmacy/dashboard/", pharmacyRouter);
-app.use("/api/doctor/dashboard/", doctorRouter);
-app.use("/api/search/", searchRouter);
-app.use("/api/booking/", bookingRouter);
-app.use("/api/nurse/dashboard/", nurseRouter);
-app.use("/api/client/", clientRouter);
-app.use("/api/register/hospital/", hospitalRegister);
-app.use("/api/register/pharmacy/", pharmacyRegister);
-app.use("/api/register/nurse/", nurseRegister);
-app.use("/api/register/doctor/", doctorRegister);
-app.use("/api/approved/", approved);
-app.use("/api/payments/", payments);
-app.use("/api/feedback/", feedBackRouter);
+app.use("/api/v1/", AdminRouter);
+app.use("/api/v1/", AdminRouter);
+app.use("/api/v1/", pharmacyRouter);
+app.use("/api/v1/", doctorRouter);
+app.use("/api/v1/", searchRouter);
+app.use("/api/v1/", bookingRouter);
+app.use("/api/v1/", nurseRouter);
+app.use("/api/v1/", clientRouter);
+app.use("/api/v1/", hospitalRegister);
+app.use("/api/v1/", pharmacyRegister);
+app.use("/api/v1/", nurseRegister);
+app.use("/api/v1/", doctorRegister);
+app.use("/api/v1/", approved);
+app.use("/api/v1/", payments);
+app.use("/api/v1/", feedBackRouter);
 //documentation
 app.use("/documentation", swaggerDoc.serve);
 app.use("/documentation", swaggerDoc.setup(swaggerDocumentation));
